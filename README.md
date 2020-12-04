@@ -1,33 +1,40 @@
-# Project
+# Normalized Trend Filtering for Biomedical Datasets
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+# Requirements
+Install required modules with:
+```
+bash
+conda create -n NTF python=3.7 numpy=1.18.1 mkl_random=1.1.0
+conda activate NTF
+pip install -r requirements.txt
+```
 
-As the maintainer of this project, please make a few updates:
+# Introduction
+Associated paper can be found here: 
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+# Data
+Paper and datasets used for empirical study:
 
-## Contributing
+* Harel_PD1: [DATA](https://www.cell.com/cms/10.1016/j.cell.2019.08.012/attachment/1ccc78b2-37c7-44f0-a829-cbd81455ea9b/mmc1.xlsx), [PAPER](https://www.cell.com/cell/fulltext/S0092-8674(19)30900-6?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0092867419309006%3Fshowall%3Dtrue)
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+* Harel_TIL: [DATA](https://www.cell.com/cms/10.1016/j.cell.2019.08.012/attachment/1ccc78b2-37c7-44f0-a829-cbd81455ea9b/mmc1.xlsx), [PAPER](https://www.cell.com/cell/fulltext/S0092-8674(19)30900-6?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0092867419309006%3Fshowall%3Dtrue)  
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+* VanAllen: [RNA-seq DATA](https://static-content.springer.com/esm/art%3A10.1038%2Fs41591-019-0654-5/MediaObjects/41591_2019_654_MOESM3_ESM.txt), [RESPONSE](https://static-content.springer.com/esm/art%3A10.1038%2Fs41591-019-0654-5/MediaObjects/41591_2019_654_MOESM4_ESM.xlsx), [PAPER](https://www.nature.com/articles/s41591-019-0654-5)  
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+* OpenPBTA: [DATA](https://github.com/AlexsLemonade/OpenPBTA-analysis#how-to-obtain-openpbta-data), [PAPER](https://alexslemonade.github.io/OpenPBTA-manuscript/)  
+Follow data download instructions from OpenPBTA (ver. release-v9-20191105)  
+RNA-seq data is found in "pbta-gene-expression-kallisto.stranded.rds"  
+Response is found in "pbta-histologies.tsv"  
 
-## Trademarks
+* inBiomap Interactome: [DATA](https://inbio-discover.intomics.com/api/data/map_public/2016_09_12/inBio_Map_core_2016_09_12.tar.gz), [PAPER](https://www.nature.com/articles/nmeth.4083)
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
+
+# Notebooks
+Notebooks produce the network figures and Tables 1. and 2. 
+
+DATASET.ipynb contains analysis for Lasso, MCP, SCAD, Ridge, GraphTF, NTF-Lasso, NTF-MCP, NTF-SCAD, Laplacian Ridge, and Shuffled Experiments
+
+DATASET_LapRidge.ipynb contains analysis for Lasso + Laplacian Ridge, MCP + Laplacian Ridge, SCAD + Laplacian Ridge
+
+
+

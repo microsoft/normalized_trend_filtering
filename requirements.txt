@@ -1,0 +1,12 @@
+joblib==0.14.1
+pandas==1.0.1
+scikit-learn==0.22.1
+scipy==1.4.1
+tqdm==4.36.1
+pycasso==0.1.2.2
+cvxpy==1.0.25
+more-itertools==8.2.0
+networkx==2.3
+seaborn==0.9.0
+matplotlib==3.1.1
+jupyter
